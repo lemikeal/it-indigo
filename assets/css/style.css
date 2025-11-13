@@ -1,4 +1,24 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*---------- Responsive Image ----------*/
+img {
+  max-width:100%;
+}
+
+/*---------- Utility Classes ----------*/
+
+.container{
+    margin:auto;
+    padding:40px;
+}
+
+
 body{
-    background-color:palevioletred;
-    font-family: Goudy Old Style,Garamond,Big Caslon,Times New Roman,serif;
+background-color:#101340;  
+font-family: "Rubik", sans-serif;
 }
