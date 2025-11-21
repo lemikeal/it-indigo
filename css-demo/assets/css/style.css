@@ -40,7 +40,7 @@ main{
 header.primary{
 background-color:#8fbdd9;
 padding:20px; 
-background-image:url("/css-demo/img/bg_1.webp"); 
+background-image: url("../bg_1.webp"); 
 background-repeat:no-repeat;  
 background-size:cover;  
 background-position: center;

@@ -33,7 +33,7 @@ main {
 header.primary {
   background-color: #ffffff;
   padding: 20px;
-  background-image: url("/assets/whitebg.jpg");
+  background-image: url("../whitebg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
