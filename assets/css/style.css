@@ -78,7 +78,7 @@ header.primary nav ul li a:hover {
 
 div.hgroup h2 {
   color: #000;
-  text-decoration: underline wavy;
+  text-decoration: underline;
   text-underline-offset: 5px;
   font-size: 2rem;
   padding: 100px 0 0 0;
