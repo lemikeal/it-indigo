@@ -10,8 +10,8 @@ html {
 }
 
 body{
-  font-family: 'Lato', sans-serif;
-  background:#c0c0c0;
+  font-family: "Rubik", sans-serif;
+  background:#ffa0f7;
   padding:20px;
 }
 
@@ -21,10 +21,13 @@ label, input {
 
 header h1{
   text-align:center;
+  color: #e60fa5;
+  font-size: 3rem;
+  text-shadow: 2px 2px #000;
 }
 
 section[id]{
-  border:6px solid rgba(0,0,0,.4);
+  border:6px solid #e60fa5;
   background:#fff;
   border-radius:12px;
   margin:40px auto;
@@ -34,7 +37,7 @@ section[id]{
 }
 
 h2.section-heading{
-   border-bottom:2px solid #c0c0c0;
+   border-bottom:2px solid #e60fa5;
 }
 
 .section-heading{
@@ -42,7 +45,7 @@ h2.section-heading{
 }
 
 h3.section-heading{
-  border-top:2px solid #c0c0c0;
+  border-top:2px solid #e60fa5;
   padding-top:20px;
 }
 
@@ -58,7 +61,7 @@ h2.section-heading + h3.section-heading {
 }
 .markup{
   flex: 1 70%;
-  background-color:lightgrey;
+  background-color:#e60fa5;
   padding:10px;
   margin-bottom:40px;
   overflow:auto;
