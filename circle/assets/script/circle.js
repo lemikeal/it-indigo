@@ -4,34 +4,69 @@
 
         });
 
-        function displayCircle() {
+        function displayDiameter() {
             
             if ($("#CircleForm").valid()) {
                 
-                document.getElementById("circle").innerHTML = "";
+                document.getElementById("diameter").innerHTML = "";
 
                 let radius;
                 let radiusfp;
                 let diameter;
-                let diameterfp;
-                let circumference;
-                let circumferencefp;
-                let area;
-                let areafp;
+                let result;
 
                 radius = document.getElementById("radius").value;
                 diameter = document.getElementById("diameter").value;
+
+                radiusfp = parseFloat( radiusfp );
+
+                diameter = calcDiameter(radiusfp);
+
+                document.getElementById("diameter").innerHTML = diameter.toString();
+            }
+        }
+
+        function displayCircumference() {
+            
+            if ($("#CircleForm").valid()) {
+                
+                document.getElementById("circumference").innerHTML = "";
+
+                let radius;
+                let radiusfp;
+                let circumference;
+                let result;
+
+                radius = document.getElementById("radius").value;
                 circumference = document.getElementById("circumference").value;
+
+                radiusfp = parseFloat( radiusfp );
+
+                circumference = calcCircumference(radiusfp, Math.PI);
+
+                document.getElementById("circumference").innerHTML = circumference.toString();
+            }
+        }
+
+        function displayArea() {
+            
+            if ($("#CircleForm").valid()) {
+                
+                document.getElementById("area").innerHTML = "";
+
+                let radius;
+                let radiusfp;
+                let area;
+                let result;
+
+                radius = document.getElementById("radius").value;
                 area = document.getElementById("area").value;
 
                 radiusfp = parseFloat( radiusfp );
-                diameterfp = parseFloat( diameterfp );
-                circumferencefp = parseFloat( circumferencefp );
-                areafp = parseFloat( areafp );
 
-                circle = calcCircle();
+                area = calcArea(radiusfp, Math.PI);
 
-                document.getElementById("circle").innerHTML = circle.toString();
+                document.getElementById("area").innerHTML = area.toString();
             }
         }
 
@@ -47,12 +82,14 @@
 
         function calcArea (radiusvalue) {
 
-            return Math.abs(Math.PI*radiusvalue*radiusvalue)
+            return Math.abs((Math.PI) * (radiusvalue*radiusvalue))
         }
 
         function clearForm() {
 
             document.getElementById("radius").value = "";
             document.getElementById("radiuserror").innerHTML = "";
-            document.getElementById("hypotenuse").innerHTML = "";
+            document.getElementById("diameter").innerHTML = "";
+            document.getElementById("circumference").innerHTML = "";
+            document.getElementById("area").innerHTML = "";
         }
