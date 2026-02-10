@@ -1,95 +1,51 @@
 "use strict";
 
-        $( "#CircleForm" ).validate({
+$("#CircleForm").validate({});
 
-        });
+function displayCircle() {
+  if ($("#CircleForm").valid()) {
+    document.getElementById("diameter").innerHTML = "";
+    document.getElementById("circumference").innerHTML = "";
+    document.getElementById("area").innerHTML = "";
 
-        function displayDiameter() {
-            
-            if ($("#CircleForm").valid()) {
-                
-                document.getElementById("diameter").innerHTML = "";
+    let radius;
+    let radiusfp;
+    let diameter;
+    let circumference;
+    let area;
+    let result;
 
-                let radius;
-                let radiusfp;
-                let diameter;
-                let result;
+    radius = document.getElementById("radius").value;
 
-                radius = document.getElementById("radius").value;
-                diameter = document.getElementById("diameter").value;
+    radiusfp = parseFloat(radiusfp);
 
-                radiusfp = parseFloat( radiusfp );
+    diameter = calcDiameter(radiusfp);
+    circumference = calcCircumference(radiusfp);
+    area = calcArea(radiusfp);
 
-                diameter = calcDiameter(radiusfp);
+    document.getElementById("diameter").innerHTML = diameter.toString();
+    document.getElementById("circumference").innerHTML =
+      circumference.toString();
+    document.getElementById("area").innerHTML = area.toString();
+  }
+}
 
-                document.getElementById("diameter").innerHTML = diameter.toString();
-            }
-        }
+function calcDiameter(radiusvalue) {
+  return 2 * radiusvalue;
+}
 
-        function displayCircumference() {
-            
-            if ($("#CircleForm").valid()) {
-                
-                document.getElementById("circumference").innerHTML = "";
+function calcCircumference(radiusvalue) {
+  return 2 * Math.PI * radiusvalue;
+}
 
-                let radius;
-                let radiusfp;
-                let circumference;
-                let result;
+function calcArea(radiusvalue) {
+  return Math.PI * (radiusvalue * radiusvalue);
+}
 
-                radius = document.getElementById("radius").value;
-                circumference = document.getElementById("circumference").value;
-
-                radiusfp = parseFloat( radiusfp );
-
-                circumference = calcCircumference(radiusfp, Math.PI);
-
-                document.getElementById("circumference").innerHTML = circumference.toString();
-            }
-        }
-
-        function displayArea() {
-            
-            if ($("#CircleForm").valid()) {
-                
-                document.getElementById("area").innerHTML = "";
-
-                let radius;
-                let radiusfp;
-                let area;
-                let result;
-
-                radius = document.getElementById("radius").value;
-                area = document.getElementById("area").value;
-
-                radiusfp = parseFloat( radiusfp );
-
-                area = calcArea(radiusfp, Math.PI);
-
-                document.getElementById("area").innerHTML = area.toString();
-            }
-        }
-
-        function calcDiameter (radiusvalue) {
-            
-            return Math.abs(2*radiusvalue)
-        }
-        
-        function calcCircumference (radiusvalue) {
-
-            return Math.abs(2*Math.PI*radiusvalue)
-        }
-
-        function calcArea (radiusvalue) {
-
-            return Math.abs((Math.PI) * (radiusvalue*radiusvalue))
-        }
-
-        function clearForm() {
-
-            document.getElementById("radius").value = "";
-            document.getElementById("radiuserror").innerHTML = "";
-            document.getElementById("diameter").innerHTML = "";
-            document.getElementById("circumference").innerHTML = "";
-            document.getElementById("area").innerHTML = "";
-        }
+function clearForm() {
+  document.getElementById("radius").value = "";
+  document.getElementById("radiuserror").innerHTML = "";
+  document.getElementById("diameter").innerHTML = "";
+  document.getElementById("circumference").innerHTML = "";
+  document.getElementById("area").innerHTML = "";
+}
