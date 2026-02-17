@@ -17,7 +17,7 @@ function displayCircle() {
 
     radius = document.getElementById("radius").value;
 
-    radiusfp = parseFloat(radiusfp);
+    radiusfp = parseFloat(radius);
 
     diameter = calcDiameter(radiusfp);
     circumference = calcCircumference(radiusfp);
