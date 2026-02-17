@@ -31,15 +31,15 @@ function displayCircle() {
 }
 
 function calcDiameter(radiusvalue) {
-  return 2 * radiusvalue;
+  return 2*radiusvalue;
 }
 
 function calcCircumference(radiusvalue) {
-  return 2 * Math.PI * radiusvalue;
+  return 2*Math.PI*radiusvalue;
 }
 
 function calcArea(radiusvalue) {
-  return Math.PI * (radiusvalue * radiusvalue);
+  return Math.PI*(radiusvalue*radiusvalue);
 }
 
 function clearForm() {

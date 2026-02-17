@@ -6,6 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+    <script src="assets/script/circle.js"></script>
 </head>
 <body>
     <form id="CircleForm" onsubmit="return false">
@@ -22,8 +23,8 @@
         <label class="formlabel">Circumference:</label><span id="circumference"></span><br>
         <label class="formlabel">Area:</label><span id="area"></span><br>
         <br><br>
-        <input type="submit" value="Calculate" id="btnSubmitCalculate">
-        <input type="submit" value="Clear" id="btnSubmitClear">
+        <input type="submit" value="Calculate" id="btnCalc" onclick="displayCircle()">
+        <input type="submit" value="Clear" id="btnClear" onclick="clearForm()" formnovalidate>
     </form>
 </body>
 </html>
