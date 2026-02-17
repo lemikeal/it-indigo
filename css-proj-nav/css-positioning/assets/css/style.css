@@ -38,6 +38,18 @@ div.hgroup h1 a {
   text-shadow: 2px 2px #000;
 }
 
+div.hgroup h2 a {
+  color: #000;
+  font-size: 2rem;
+  text-shadow: 1px 1px #e60fa5;
+}
+
+div.hgroup h3 a {
+  color: #000;
+  font-size: 2rem;
+  text-shadow: 1px 1px #e60fa5;
+}
+
 header.primary nav ul {
   list-style-type: none;
   margin: 0;
