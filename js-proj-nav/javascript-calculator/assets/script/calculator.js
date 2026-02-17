@@ -30,32 +30,22 @@ function calculate() {
         
         /* if the operator was "Add" then add */
         if (operator == "Add") {
-            if(operand1fp <= operand2fp && operand1fp <= operand3fp) {
-                result = operand1fp;
-            }
-            if(operand2fp <= operand1fp && operand2fp <= operand3fp) {
-                result = operand2fp;
-            }
+            result = (operand1fp + operand2fp);
         }
  
         /* if the operator was "Sub" then subtract */
         if (operator == "Sub") {
-            if(operand1fp >= operand2fp && operand1fp >= operand3fp) {
-                result = operand1fp;
-            }
-            if(operand2fp >= operand1fp && operand2fp >= operand3fp) {
-                result = operand2fp;
-            }
+            result = (operand1fp - operand2fp);
         }
 
         /* if operator was "Mul" then multiply */
         if (operator == "Mul") {
-            result = (operand1fp + operand2fp + operand3fp) / 3.0;
+            result = (operand1fp * operand2fp);
         }
 
           /* if operator was "Div" then divide */
         if (operator == "Div") {
-            result = (operand1fp + operand2fp + operand3fp) / 3.0;
+            result = (operand1fp / operand2fp);
         }
         
         /* convert the result to a string and display it */
