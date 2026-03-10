@@ -1,0 +1,208 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Unit Converter" />
+    <meta name="author" content="L. Mikeal" />
+    <title>Unit Converter</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/style/unit-converter.css"
+    />
+  </head>
+  <body>
+    <form id="myform">
+      <div class="formcontainer" onsubmit="return false;">
+        <h1>Unit Converter (AJAX)</h1>
+        <fieldset id="detail">
+          <legend>Unit Converter (AJAX)</legend>
+          <br />
+
+          <label class="formlabel" for="FromValue">From Value: </label>
+          <input
+            type="text"
+            id="FromValue"
+            name="FromValue"
+            size="15"
+            maxlength="15"
+            data-rule-required="true"
+            data-msg-required="From Value is Required"
+            data-rule-number="true"
+            data-msg-number="From Value must be a Number"
+          />
+          <label class="error" for="FromValue" id="FromValueError"></label>
+          <br /><br />
+
+          <label class="formlabel">From Unit: </label>
+          <label for="Centimeters1">
+            <input
+              type="radio"
+              name="FromUnit"
+              id="Centimeters1"
+              value="Centimeters1"
+              data-rule-required="true"
+              data-msg-required="From Unit is Required"
+            />centimeters
+          </label>
+          <label for="Meters1">
+            <input
+              type="radio"
+              name="FromUnit"
+              id="Meters1"
+              value="Meters1"
+              data-rule-required="true"
+              data-msg-required="From Unit is Required"
+            />meters
+          </label>
+          <label for="Kilometers1">
+            <input
+              type="radio"
+              name="FromUnit"
+              id="Kilometers1"
+              value="Kilometers1"
+              data-rule-required="true"
+              data-msg-required="From Unit is Required"
+            />kilometers
+          </label>
+          <label for="Inches1">
+            <input
+              type="radio"
+              name="FromUnit"
+              id="Inches1"
+              value="Inches1"
+              data-rule-required="true"
+              data-msg-required="From Unit is Required"
+            />inches
+          </label>
+          <label for="Feet1">
+            <input
+              type="radio"
+              name="FromUnit"
+              id="Feet1"
+              value="Feet1"
+              data-rule-required="true"
+              data-msg-required="From Unit is Required"
+            />feet
+          </label>
+          <label for="Yards1">
+            <input
+              type="radio"
+              name="FromUnit"
+              id="Yards1"
+              value="Yards1"
+              data-rule-required="true"
+              data-msg-required="From Unit is Required"
+            />yards
+          </label>
+          <label for="Miles1">
+            <input
+              type="radio"
+              name="FromUnit"
+              id="Miles1"
+              value="Miles1"
+              data-rule-required="true"
+              data-msg-required="From Unit is Required"
+            />miles
+          </label>
+          <br /><br />
+
+          <label class="formlabel">To Unit: </label>
+          <label for="Centimeters2">
+            <input
+              type="radio"
+              name="ToUnit"
+              id="Centimeters2"
+              value="Centimeters2"
+              data-rule-required="true"
+              data-msg-required="To Unit is Required"
+            />centimeters
+          </label>
+          <label for="Meters2">
+            <input
+              type="radio"
+              name="ToUnit"
+              id="Meters2"
+              value="Meters2"
+              data-rule-required="true"
+              data-msg-required="To Unit is Required"
+            />meters
+          </label>
+          <label for="Kilometers2">
+            <input
+              type="radio"
+              name="ToUnit"
+              id="Kilometers2"
+              value="Kilometers2"
+              data-rule-required="true"
+              data-msg-required="To Unit is Required"
+            />kilometers
+          </label>
+          <label for="Inches2">
+            <input
+              type="radio"
+              name="ToUnit"
+              id="Inches2"
+              value="Inches2"
+              data-rule-required="true"
+              data-msg-required="To Unit is Required"
+            />inches
+          </label>
+          <label for="Feet2">
+            <input
+              type="radio"
+              name="ToUnit"
+              id="Feet2"
+              value="Feet2"
+              data-rule-required="true"
+              data-msg-required="To Unit is Required"
+            />feet
+          </label>
+          <label for="Yards2">
+            <input
+              type="radio"
+              name="ToUnit"
+              id="Yards2"
+              value="Yards2"
+              data-rule-required="true"
+              data-msg-required="To Unit is Required"
+            />yards
+          </label>
+          <label for="Miles2">
+            <input
+              type="radio"
+              name="ToUnit"
+              id="Miles2"
+              value="Miles2"
+              data-rule-required="true"
+              data-msg-required="To Unit is Required"
+            />miles
+          </label>
+          <br /><br />
+
+          <label class="formlabel">To Value: </label>
+          <span id="ToValue"></span>
+          <br /><br />
+
+          <input
+            type="button"
+            value="Calculate"
+            name="Calculate"
+            onclick="calculate()"
+          />
+          <input
+            type="button"
+            value="Clear"
+            name="Clear"
+            onclick="clearform()"
+            novalidate
+          />
+        </fieldset>
+      </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+    <script src="assets/script/unit-converter.js"></script>
+  </body>
+</html>
