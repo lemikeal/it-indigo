@@ -30,7 +30,7 @@ function calculate() {
             fromunit = document.getElementById("Miles1").value;
         }
         
-        let tounit = document.getElementById("ToUnit").value;
+        let tounit;
         if (document.getElementById("Centimeters2").checked) {
             fromunit = document.getElementById("Centimeters2").value;
         }
@@ -60,21 +60,21 @@ function calculate() {
 async function CalculateResult(fromvalue, fromunit, tounit) {
     "use strict;"
         
-        let myURL = "https://brucebauer.info/assets/ITEC3650/gethint.php?Name=E";
+        let myURL = "https://brucebauer.info/assets/ITEC3650/unitsconversion.php";
 
         myURL = myURL + "?FromValue=" + encodeURIComponent(fromvalue) + "&FromUnit=" + encodeURIComponent(fromunit) + "&ToUnit=" + encodeURIComponent(tounit);
 
         let myCalcObject = await fetch(myURL);
         let myResult = await myCalcObject.text();
         
-        document.getElementById("Result").innerHTML = myResult;
+        document.getElementById("ToValue").innerHTML = myResult;
 }
 
 function clearform() {
     "use strict";
     
     document.getElementById("FromValue").value = "";
-    document.getElementById("FromValueMsg").innerHTML = "";
+    document.getElementById("FromValueError").innerHTML = "";
     document.getElementById("Centimeters1").checked = false;
     document.getElementById("Meters1").checked = false;
     document.getElementById("Kilometers1").checked = false;
@@ -82,7 +82,7 @@ function clearform() {
     document.getElementById("Feet1").checked = false;
     document.getElementById("Yards1").checked = false;
     document.getElementById("Miles1").checked = false;
-    document.getElementById("FromUnitMsg").innerHTML = "";
+    document.getElementById("FromUnitError").innerHTML = "";
     document.getElementById("Centimeters2").checked = false;
     document.getElementById("Meters2").checked = false;
     document.getElementById("Kilometers2").checked = false;
@@ -90,7 +90,7 @@ function clearform() {
     document.getElementById("Feet2").checked = false;
     document.getElementById("Yards2").checked = false;
     document.getElementById("Miles2").checked = false;
-    document.getElementById("ToUnitMsg").innerHTML = "";
+    document.getElementById("ToUnitError").innerHTML = "";
     document.getElementById("ToValue").innerHTML = "";
 }
 
