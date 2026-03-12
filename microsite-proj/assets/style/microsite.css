@@ -32,11 +32,14 @@ nav a {
 }
 nav a:hover {
   color: #ff6347;
-  text-decoration: underline;
 }
 section {
   padding: 25px;
-  margin: 20px auto;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  margin-left: 150px;
+  margin-right: 150px;
   max-width: 900px;
   background-color: #ffffff;
   border-radius: 8px;
@@ -51,3 +54,57 @@ section h2 {
   font-size: 1.8rem;
   margin-bottom: 15px;
 }
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.2fr;
+  grid-template-areas: "music craftgarden lodging";
+  grid-gap: 0.2rem;
+  column-gap: 45px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+#music {
+padding: 25px;
+  margin: 20px auto;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  text-align: center;
+}
+#craftgarden {
+padding: 25px;
+  margin: 20px auto;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  text-align: center;
+}
+#lodging {
+padding: 25px;
+  margin: 20px auto;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  text-align: center;
+}
+.container div h2 {
+  color: #000;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
