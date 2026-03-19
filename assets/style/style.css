@@ -3,19 +3,23 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
+  background-image: url("../img/white-bg.jpg");
+  background-repeat: no-repeat;  
+  background-size: cover;  
+  background-position: center;
   background-color: #ffffff;
   color: #000;
 }
 header {
   background-color: #ffa0f7;
   color: #ffffff;
-  padding: 25px 0;
+  padding: 50px 0;
   text-align: center;
   box-shadow: 0 4px 6px #000;
 }
 header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 header h3 {
   margin: 0;
