@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Value History & Conversion</title>
+    <link rel="stylesheet" href="assets/style/currency-converter.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+<body>
+    <div id="cvh-container">
+        <h2>Currency Value History</h2>
+        
+        <div class="form-row">
+            <label for="fromCurrency">From Currency</label>
+            <select id="fromCurrency">
+                <option value="">Select a Currency...</option>
+                <option value="USD">US Dollar</option>
+                <option value="JPY">Japanese Yen</option>
+                <option value="MXN">Mexican Peso</option>
+                <option value="EUR">Euro</option>
+                <option value="GBP">British Pound</option>
+            </select>
+            <span class="error" id="fromError"></span>
+        </div>
+
+        <div class="form-row">
+            <label for="toCurrency">To Currency</label>
+            <select id="toCurrency">
+                <option value="">Select a Currency...</option>
+                <option value="USD">US Dollar</option>
+                <option value="JPY">Japanese Yen</option>
+                <option value="MXN">Mexican Peso</option>
+                <option value="EUR">Euro</option>
+                <option value="GBP">British Pound</option>
+            </select>
+            <span class="error" id="toError"></span>
+        </div>
+
+        <div class="form-row">
+            <label for="startDate">From Date</label>
+            <input type="date" id="startDate">
+            <span class="error" id="startError"></span>
+        </div>
+
+        <div class="form-row">
+            <label for="endDate">To Date</label>
+            <input type="date" id="endDate">
+            <span class="error" id="endError"></span>
+        </div>
+
+        <div class="button-row">
+            <button id="showResults">Calculate</button>
+            <button id="clearForm">Clear</button>
+        </div>
+
+        <canvas id="chart" width="400" height="300"></canvas>
+    </div>
+    <script src="assets/script/currency-converter.js"></script>
+</body>
+</html>
