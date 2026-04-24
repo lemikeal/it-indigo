@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let chart = null;
 
     const today = new Date().toISOString().split('T')[0];
-    toDate.value = today;
+    endDate.value = today;
 
     showBtn.addEventListener("click", () => {
         clearErrors();
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(response => response.json())
             .then(data => {
                 if (!data.results || data.results.length === 0) {
-                    alert("No Data Found. Try Date Range From Previous Month.");
+                    alert("No Data Found. Try Date From Previous Month.");
                     return;
                 }
 
@@ -83,8 +83,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 datasets: [{
                     label: `${from} to ${to}`,
                     data: points,
-                    borderColor: "#2c3e50",
-                    backgroundColor: "rgba(44, 62, 80, 0.1)",
+                    borderColor: "#e60fa5",
+                    backgroundColor: "#ffa0f7",
                     borderWidth: 2,
                     fill: true,
                     tension: 0.1
