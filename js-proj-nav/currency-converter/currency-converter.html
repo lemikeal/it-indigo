@@ -1,70 +1,69 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
     <title>Currency Conversion</title>
-    <link rel="stylesheet" href="assets/style/currency-converter.css">
-</head>
-<body>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="L. Mikeal" />
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
     <div id="cvh-container">
-        <h2>Currency Value History & Conversion</h2>
-        
-        <div class="form-row">
-            <label for="fromCurrency">From Currency</label>
-            <select id="fromCurrency">
-                <option value="">Select Currency</option>
-                <option value="USD">USD &#36;</option>
-                <option value="EUR">EUR &#8364;</option>
-                <option value="MXN">PHP &#8369;</option>
-                <option value="JPY">JPY &#165;</option>
-                <option value="GBP">GBP &#163;</option>
-            </select>
-            <span class="error" id="fromError"></span>
-        </div>
-<br>
-        <div class="form-row">
-            <label for="toCurrency">To Currency</label>
-            <select id="toCurrency">
-                <option value="">Select Currency</option>
-                <option value="USD">USD &#36;</option>
-                <option value="EUR">EUR &#8364;</option>
-                <option value="MXN">PHP &#8369;</option>
-                <option value="JPY">JPY &#165;</option>
-                <option value="GBP">GBP &#163;</option>
-            </select>
-            <span class="error" id="toError"></span>
-        </div>
-<br>
-        <div class="form-row">
-            <label for="startDate">From Date</label>
-            <input type="date" id="startDate">
-            <span class="error" id="startError"></span>
-        </div>
-<br>
-        <div class="form-row">
-            <label for="endDate">To Date</label>
-            <input type="date" id="endDate">
-            <span class="error" id="endError"></span>
-        </div>
-<br>
-        <div class="button-row">
-            <button id="showResults">Calculate</button>
-            <button id="clearForm">Clear</button>
-        </div>
+      <h2>Currency Value History & Conversion</h2>
 
-        <canvas id="chart" width="400" height="300"></canvas>
+      <div class="form-row">
+        <label for="fromCurrency">From Currency</label>
+        <select id="fromCurrency">
+          <option value="">Select Currency</option>
+          <option value="USD">USD &#36;</option>
+          <option value="EUR">EUR &#8364;</option>
+          <option value="MXN">PHP &#8369;</option>
+          <option value="JPY">JPY &#165;</option>
+          <option value="GBP">GBP &#163;</option>
+        </select>
+        <span class="error" id="fromError"></span>
+      </div>
+      <br />
+      <div class="form-row">
+        <label for="toCurrency">To Currency</label>
+        <select id="toCurrency">
+          <option value="">Select Currency</option>
+          <option value="USD">USD &#36;</option>
+          <option value="EUR">EUR &#8364;</option>
+          <option value="MXN">PHP &#8369;</option>
+          <option value="JPY">JPY &#165;</option>
+          <option value="GBP">GBP &#163;</option>
+        </select>
+        <span class="error" id="toError"></span>
+      </div>
+      <br />
+      <div class="form-row">
+        <label for="startDate">From Date</label>
+        <input type="date" id="startDate" />
+        <span class="error" id="startError"></span>
+      </div>
+      <br />
+      <div class="form-row">
+        <label for="endDate">To Date</label>
+        <input type="date" id="endDate" />
+        <span class="error" id="endError"></span>
+      </div>
+      <br />
+      <div class="button-row">
+        <button id="showResults">Calculate</button>
+        <button id="clearForm">Clear</button>
+      </div>
+
+      <canvas id="chart" width="400" height="300"></canvas>
     </div>
     <style>
-        .error {
-    color: #c0392b;
-    font-size: 14px;
-    margin-top: 5px;
-}
+      .error {
+        color: #c0392b;
+        font-size: 14px;
+        margin-top: 5px;
+      }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
     <script src="assets/script/currency-converter.js"></script>
-</body>
+  </body>
 </html>
