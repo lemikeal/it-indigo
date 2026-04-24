@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Value History & Conversion</title>
     <link rel="stylesheet" href="assets/style/currency-converter.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
 </head>
 <body>
     <div id="cvh-container">
@@ -25,7 +23,7 @@
             </select>
             <span class="error" id="fromError"></span>
         </div>
-
+<br>
         <div class="form-row">
             <label for="toCurrency">To Currency</label>
             <select id="toCurrency">
@@ -38,19 +36,19 @@
             </select>
             <span class="error" id="toError"></span>
         </div>
-
+<br>
         <div class="form-row">
             <label for="startDate">From Date</label>
             <input type="date" id="startDate">
             <span class="error" id="startError"></span>
         </div>
-
+<br>
         <div class="form-row">
             <label for="endDate">To Date</label>
             <input type="date" id="endDate">
             <span class="error" id="endError"></span>
         </div>
-
+<br>
         <div class="button-row">
             <button id="showResults">Calculate</button>
             <button id="clearForm">Clear</button>
@@ -58,6 +56,8 @@
 
         <canvas id="chart" width="400" height="300"></canvas>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
     <script src="assets/script/currency-converter.js"></script>
 </body>
 </html>

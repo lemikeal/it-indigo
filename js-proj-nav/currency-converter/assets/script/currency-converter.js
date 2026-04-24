@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let chart = null;
 
-    // Set "To Date" to today by default
     const today = new Date().toISOString().split('T')[0];
     toDate.value = today;
 
@@ -32,21 +31,18 @@ document.addEventListener("DOMContentLoaded", () => {
         
         if (!valid) return;
 
-        // Massive.com / Polygon API Settings
-        const apiKey = "gceGVkrlWmEWUN9ONAaUX0aPokVhcR51"; 
+        const apiKey = "T9P9z7nSTe_bH8DjBoJ8B2m3N_gl_thJ"; 
         const ticker = `C:${from}${to}`;
         const url = `https://api.polygon.io/v2/aggs/ticker/${ticker}/range/1/day/${start}/${end}?adjusted=true&sort=asc&apiKey=${apiKey}`;
 
         fetch(url)
             .then(response => response.json())
             .then(data => {
-                // IMPORTANT: Massive.com results are stored in data.results
                 if (!data.results || data.results.length === 0) {
                     alert("No Data Found. Try Date Range From Previous Month.");
                     return;
                 }
 
-                // Map results: 't' is time (ms), 'c' is closing price
                 let points = data.results.map(item => ({
                     x: item.t, 
                     y: item.c
@@ -60,16 +56,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     clearBtn.addEventListener("click", () => {
-        // Reset Inputs
         fromCurrency.value = "";
         toCurrency.value = "";
         startDate.value = "";
         endDate.value = today;
 
-        // Reset Errors
         clearErrors();
 
-        // Destroy Chart
         if (chart) {
             chart.destroy();
             chart = null;
