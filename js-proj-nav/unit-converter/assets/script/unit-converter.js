@@ -10,8 +10,8 @@ $(document).ready(function () {
 
         let valid = true;
 
-        if (!fromValue) {
-            $('#FromValueMsg').text('From Value is Required');
+        if (fromValue === '' || isNaN(fromValue)) {
+            $('#FromValueMsg').text('Value is Required / Must Be a Number');
             valid = false;
         }
         if (!fromUnit) {
@@ -32,7 +32,7 @@ $(document).ready(function () {
                 $('#ToValue').val(result);
             },
             error: function () {
-                $('#ToValue').val('Error Retrieving Conversion');
+                $('#ToValue').val('Retrieving Error');
             }
         });
     });
