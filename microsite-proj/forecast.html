@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>Ozark Folk Center State Park</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="L. Mikeal" />
+    <meta name="robots" content="noindex" />
+    <link href="assets/style/forecast.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <img
+      id="OFCLogo"
+      src="assets/img/1973.svg"
+      alt="OFC Logo"
+      />
+      <h1>Ozark Folk Center | Forecast</h1>
+    </header>
+    <nav>
+      <a id="nav" href="microsite.html">Home</a>
+      <a id="nav" href="music.html">Music</a>
+      <a id="nav" href="craft-garden.html">Craft & Garden</a>
+      <a id="nav" href="lodging.html">Lodging</a>
+      <a id="nav" href="https://www.arkansasstateparks.com/events?f%5B0%5D=grid_events_park%3A1881">Events</a>
+      <a id="nav" href="contact.html">Contact</a>
+      <a id="nav" href="forecast.html">Forecast</a>
+    </nav>
+    <section>
+<h2>Temperature Forecast</h2>
+<div>
+            <div>
+                <label for="locationInput" class="formlabel">Enter City</label>
+                <input type="text" id="locationInput" placeholder="e.g. Little Rock"">
+                <span id="locError" class="error"></span>
+            </div>
+            <div class="calc-actions" style="margin-top: 20px;">
+                <button type="button" onclick="getWeatherForecast()" class="btn-main">Get Forecast</button>
+            </div>
+        </div>
+    </section>
+    <section id="results-container">
+        <div>
+            <div>
+                <h2>City Found</h2>
+                <div id="location-info">
+                    </div>
+            </div>
+            <aside>
+                <h3>Coordinates</h3>
+                <p id="coord-list">
+                </p>
+            </aside>
+        </div>
+        <div class="chart-wrapper">
+            <h3>7-Day Trend (°F)</h3>
+            <canvas id="weatherChart"></canvas>
+        </div>
+        <div class="weather-table-container">
+            <h3>Hourly Forecast</h3>
+            <table id="forecastTable">
+                <thead>
+                    <tr>
+                        <th>Date, Time</th>
+                        <th>Temperature (°F)</th>
+                    </tr>
+                </thead>
+                <tbody id="forecastBody"></tbody>
+            </table>
+        </div>
+    </section>
+    <footer id="footer">
+      &copy; Ozark Folk Center State Park 2026
+    </br>
+      <a id="nav" href="contact.html" title="Contact Page">Contact</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/script/forecast.js"></script>
+  </body>
+</html>

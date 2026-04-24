@@ -1,7 +1,6 @@
 html {
         display: inline-block;
         width: 200px;
-        text-align: right;
         padding: 5px;
         font-weight: bold;
     }
@@ -9,4 +8,12 @@ html {
     .error {
         color: red;
         padding-left: 5px;
+    }
+
+    .formlabel {
+        font-style: italic;
+    }
+
+    #diameter, #circumference, #area {
+        color:blue;
     }

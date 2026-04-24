@@ -1,0 +1,140 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f9;
+  color: #000;
+}
+header {
+  background-image: url("../img/ozark-mtns.jpg");
+  background-repeat:no-repeat;  
+  background-size:cover;  
+  background-position: center;
+  background-color: #0b420d;
+  color: white;
+  padding: 5px 0;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+#ofclogo {
+  height: 200px;
+  width: 200px;
+}
+#ofclogo, h1 {
+  display: inline-block;
+  vertical-align: middle;
+}
+nav {
+  position: sticky;
+  background-color: #0b420d;
+  text-align: center;
+  padding: 12px 0;
+  box-shadow: 0 2px 10px #000;
+  top: 0;
+}
+#nav{
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+#nav:hover {
+  color: #ff6347;
+}
+section {
+  padding: 20px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+section h2 {
+  color: #000;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+#link {
+  text-decoration: underline;
+}
+footer {
+  position: static;
+  left: 0;
+  bottom: 0;
+  background-color: #0b420d;
+  text-align: center;
+  padding: 12px 0;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+button {
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 18px;
+    margin: auto;
+}
+button { 
+  background-color: #0b420d; color: #f4f6f9; 
+}
+.error {
+    color: #c0392b;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+.calc-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+.result-container {
+    margin-top: 30px;
+    padding: 30px;
+}
+.chart-wrapper {
+    height: 400px;
+    width: 100%;
+    padding: 30px;
+    margin: 40px 0;
+}
+.weather-table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+        th {
+            padding: 10px;
+            text-align: left;
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+        td {
+            padding: 10px;
+            border-bottom: 1px solid;
+        }
+        .error { 
+          color: #c0392b; font-weight: bold; margin-top: 10px; display: block; 
+        }
+        .chart-wrapper {
+            padding: 20px;
+            margin-top: 30px;
+            margin-right: 5px;
+        }
